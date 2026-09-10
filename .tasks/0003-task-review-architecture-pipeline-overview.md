@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -39,10 +39,11 @@ and the end-to-end pipeline stages a function goes through.
 
 ## Acceptance Criteria
 - [ ] Document exists at the path above and is linked from `.documents/01-review/00-index.md` and
-      `0002`.
-- [ ] Includes a Mermaid sequence or flow diagram.
-- [ ] Cites concrete file:line for each major claim.
-- [ ] Notes anything surprising/undocumented (e.g. global state, singleton-like patterns).
+      `0002`. (Document exists; linking from `00-index.md` — which does not exist yet — and from `0002`
+      is owned by the orchestrator, not this task.)
+- [x] Includes a Mermaid sequence or flow diagram.
+- [x] Cites concrete file:line for each major claim.
+- [x] Notes anything surprising/undocumented (e.g. global state, singleton-like patterns).
 
 ## Dependencies
 None — can start immediately in parallel with 0004–0010.
