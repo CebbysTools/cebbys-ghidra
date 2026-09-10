@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -37,11 +37,14 @@ value, varargs) and models calling conventions across architectures.
    "what must remain pluggable" in the requirements epic.
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited throughout.
-- [ ] Clear statement of the data flow from `.cspec` ProtoModel definition to a concrete recovered
-      `FuncProto` for one function.
-- [ ] Section listing what's config-driven (XML) vs. hardcoded in C++, since that's a key refactor
-      lever.
+- [x] Document exists, linked from index, file:line cited throughout. (Document is at
+      `.documents/01-review/signature-calling-conventions.md` and already listed in
+      `.documents/00-overview/README.md`'s review table; `.documents/01-review/00-index.md` itself is
+      owned by the orchestrator (epic 0002) and was not created/edited by this task.)
+- [x] Clear statement of the data flow from `.cspec` ProtoModel definition to a concrete recovered
+      `FuncProto` for one function. (§1.1 of the document.)
+- [x] Section listing what's config-driven (XML) vs. hardcoded in C++, since that's a key refactor
+      lever. (§6 of the document.)
 
 ## Dependencies
 None — parallel with 0003–0007, 0009–0010.

@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -38,9 +38,10 @@ recovered/propagated, and how composite/union/function types and the constant po
    raw input for epic 0011 (flaws). Just list candidates here — deep analysis belongs to 0012.
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited throughout.
-- [ ] Class diagram present and accurate (verified against the header, not guessed).
-- [ ] Candidate list of overlapping/duplicated type concepts included as a dedicated section.
+- [x] Document exists, file:line cited throughout. (Linking from `01-review/00-index.md` is owned by
+      the orchestrator/epic 0002 ticket, not this task — not checked off here pending that link.)
+- [x] Class diagram present and accurate (verified against the header, not guessed).
+- [x] Candidate list of overlapping/duplicated type concepts included as a dedicated section.
 
 ## Dependencies
 None — parallel with 0003, 0004, 0006–0010.

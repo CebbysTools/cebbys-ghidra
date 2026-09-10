@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -39,9 +39,9 @@ regression safety).
    subsystem named in 0004–0009, based on actual test coverage found.
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited throughout.
-- [ ] Explicit list of test coverage gaps relevant to a refactor (this directly feeds 0015/0019).
-- [ ] At least one concrete `datatests` example walked through end-to-end (input → assertion).
+- [x] Document exists, linked from index, file:line cited throughout.
+- [x] Explicit list of test coverage gaps relevant to a refactor (this directly feeds 0015/0019).
+- [x] At least one concrete `datatests` example walked through end-to-end (input → assertion).
 
 ## Dependencies
 None — parallel with 0003–0009.

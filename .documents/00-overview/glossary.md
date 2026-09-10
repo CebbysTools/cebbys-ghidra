@@ -39,6 +39,26 @@ the review document that treats the term in depth over re-explaining it here.
   See `cast.hh`.
 - **Capability**: The self-registration mechanism new architectures/rules/languages use to plug into
   the decompiler at startup. See `capability.hh`.
+- **ConstantPool / CPoolRecord**: The container (`ConstantPool`) and per-entry record (`CPoolRecord`)
+  used to represent constant-pool references for deferred-compilation languages (e.g. Java byte-code) —
+  an instruction-level reference resolves to a primitive value, string, method, field, or data-type
+  descriptor. See `cpool.hh`. Detailed in
+  [`../01-review/type-system.md`](../01-review/type-system.md).
+- **ResolvedUnion**: A cached record of which field of a `TypeUnion` (or effectively-union struct/
+  pointer) a specific data-flow access resolves to, produced by the `ScoreUnionFields` heuristic search
+  and cached per `(PcodeOp, slot)` edge. See `unionresolve.hh`, detailed in
+  [`../01-review/type-system.md`](../01-review/type-system.md).
+- **TypeFactory**: The per-`Architecture` container that owns, interns (by name+id), and canonicalizes
+  every `Datatype` object; `TypeFactoryGhidra` is the subclass that additionally queries Ghidra's
+  `DataTypeManager` over the wire on a cache miss. See `type.hh`, `typegrp_ghidra.hh`, detailed in
+  [`../01-review/type-system.md`](../01-review/type-system.md).
+- **TypeOp**: The per-P-code-opcode policy object pairing operator emulation/display with data-type
+  propagation rules (`propagateType()`); one instance per `OpCode`, referenced by every `PcodeOp` of
+  that opcode. See `typeop.hh`, detailed in [`../01-review/type-system.md`](../01-review/type-system.md).
+- **typelock**: A `Varnode` flag marking its `Datatype` as locked (usually inherited from a type-locked
+  `Symbol`) so the type-propagation engine may refine an unlocked Varnode's type but can never overwrite
+  a locked one. See `varnode.hh`, detailed in
+  [`../01-review/type-system.md`](../01-review/type-system.md).
 - **ActionDatabase**: `Architecture`'s registry of named *root* `Action`s (`decompile`, `jumptable`,
   `normalize`, `paramid`, `register`, `firstpass`) sliced out of one hand-built "universal" `Action`
   tree. See `action.hh`, detailed in
@@ -90,3 +110,46 @@ the review document that treats the term in depth over re-explaining it here.
   parenthesization purely from these fields, for both expressions and complex-type declarators. See
   `printlanguage.hh`. Detailed in
   [`../01-review/expression-cast-printer.md`](../01-review/expression-cast-printer.md).
+- **ParamTrial / ParamActive**: `ParamTrial` is one putative parameter (address, size, flags) observed
+  at a call site or function entry; `ParamActive` is the working set of trials for one call/function,
+  iteratively narrowed to a formal parameter list. See `fspec.hh`. Detailed in
+  [`../01-review/signature-calling-conventions.md`](../01-review/signature-calling-conventions.md).
+- **ModelRule**: A declarative, `.cspec`-configured rule (`DatatypeFilter` + optional `QualifierFilter`
+  → `AssignAction`) that assigns storage for a parameter/return value class, layered on top of (and
+  falling back to) the older hardcoded ordered-resource-list assignment algorithm. See
+  `modelrules.hh`. Detailed in
+  [`../01-review/signature-calling-conventions.md`](../01-review/signature-calling-conventions.md).
+- **Override**: A per-function container of commands (prototype overrides, indirect-call retargeting,
+  flow-type conversion, forced gotos) that let asserted (user- or analysis-supplied) information
+  short-circuit the decompiler's own recovery for one function/call site. See `override.hh`. Detailed
+  in [`../01-review/signature-calling-conventions.md`](../01-review/signature-calling-conventions.md).
+- **ParamID**: A secondary, independent analysis (`ParamIDAnalysis`) that scores each already-recovered
+  (or raw) parameter's data-flow usage for confidence, feeding Ghidra's bulk signature-commit tooling;
+  it does not itself assign storage. See `paramid.hh`. Detailed in
+  [`../01-review/signature-calling-conventions.md`](../01-review/signature-calling-conventions.md).
+- **DecompInterface**: The Java-side façade for a single decompiler subprocess — owns its lifecycle
+  (spawn, auto-respawn on crash, dispose), caches configuration, and exposes
+  `decompileFunction`/`structureGraph`/`generateSignatures`. See
+  `Ghidra/Features/Decompiler/src/main/java/ghidra/app/decompiler/DecompInterface.java`. Detailed in
+  [`../01-review/java-integration-testing.md`](../01-review/java-integration-testing.md).
+- **DecompileCallback**: The Java handler for queries the native `decompile` process makes back into
+  Ghidra mid-decompilation (bytes, comments, symbols, p-code injection, datatypes, strings) — the "pull"
+  side of `GhidraCommand`/`ArchitectureGhidra`'s wire protocol. See
+  `Ghidra/Features/Decompiler/src/main/java/ghidra/app/decompiler/DecompileCallback.java`. Detailed in
+  [`../01-review/java-integration-testing.md`](../01-review/java-integration-testing.md).
+- **HighFunction**: The Java-side decoded mirror of one decompiled function — `HighVariable`s, `FuncProto`,
+  and symbol mappings reconstructed from the wire response — that both the UI and commit-back actions
+  (`HighFunctionDBUtil`) operate on. See
+  `Ghidra/Framework/SoftwareModeling/src/main/java/ghidra/program/model/pcode/HighFunction.java`.
+  Detailed in [`../01-review/java-integration-testing.md`](../01-review/java-integration-testing.md).
+- **ClangTokenGroup**: The root of the parsed C-markup token tree (`DecompileResults.getCCodeMarkup()`)
+  that the `ghidra.app.decompiler.component` UI package renders, navigates, and highlights — a consumer
+  of, not a participant in, the P-code→C pipeline. See
+  `Ghidra/Features/Decompiler/src/main/java/ghidra/app/decompiler/ClangTokenGroup.java`. Detailed in
+  [`../01-review/java-integration-testing.md`](../01-review/java-integration-testing.md).
+- **datatests / FunctionTestCollection**: The decompiler's data-driven regression format — one XML file
+  per scenario, embedding a synthetic binary image, a console script, and `<stringmatch>` regex
+  assertions (with min/max occurrence bounds) checked against printed C output; loaded and run by
+  `FunctionTestCollection` in the separate `ghidra_test` executable, distinct from the production
+  `decompile` binary. See `Ghidra/Features/Decompiler/src/decompile/cpp/testfunction.hh`. Detailed in
+  [`../01-review/java-integration-testing.md`](../01-review/java-integration-testing.md).
