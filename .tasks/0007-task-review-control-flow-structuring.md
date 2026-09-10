@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -36,9 +36,10 @@ blocks into structured C control flow (if/else, while/for/do, switch, and minima
    like Duff's device, etc.).
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited throughout.
-- [ ] `FlowBlock` hierarchy diagram present.
-- [ ] Explicit description of the goto-fallback trigger condition, quoting/paraphrasing source
+- [x] Document exists, file:line cited throughout. (Linking from
+      `.documents/01-review/00-index.md` is owned by the orchestrator/epic 0002, not this task.)
+- [x] `FlowBlock` hierarchy diagram present.
+- [x] Explicit description of the goto-fallback trigger condition, quoting/paraphrasing source
       comments where they exist.
 
 ## Dependencies

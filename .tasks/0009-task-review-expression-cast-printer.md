@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -43,9 +43,9 @@ C source text, including cast insertion and language-specific formatting.
    well-factored today."
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited throughout.
-- [ ] Explicit shared-vs-duplicated breakdown between PrintC and PrintJava.
-- [ ] At least 3 concrete cast-insertion rules explained with the source condition that triggers them.
+- [x] Document exists, linked from index, file:line cited throughout.
+- [x] Explicit shared-vs-duplicated breakdown between PrintC and PrintJava.
+- [x] At least 3 concrete cast-insertion rules explained with the source condition that triggers them.
 
 ## Dependencies
 None — parallel with 0003–0008, 0010.

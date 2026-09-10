@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -35,9 +35,12 @@ graph that the rest of the decompiler operates on.
    reuse by `.documents/00-overview/glossary.md`.
 
 ## Acceptance Criteria
-- [ ] Document exists, is linked from the index, cites file:line for each structure.
-- [ ] Includes at least one diagram (class relationship or data-flow) in Mermaid.
-- [ ] Explicitly flags any place object lifetime/ownership is unclear or documented only by
+- [ ] Document exists, is linked from the index, cites file:line for each structure. (Document exists
+      at `.documents/01-review/ssa-varnode-heritage.md` and cites concrete `file:line` locations
+      throughout; linking from `.documents/01-review/00-index.md` is owned by the orchestrator, not
+      this task, and is left unchecked here pending that.)
+- [x] Includes at least one diagram (class relationship or data-flow) in Mermaid.
+- [x] Explicitly flags any place object lifetime/ownership is unclear or documented only by
       convention (e.g. raw pointers into arena-allocated pools).
 
 ## Dependencies

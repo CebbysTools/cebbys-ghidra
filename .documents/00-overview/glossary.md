@@ -39,3 +39,54 @@ the review document that treats the term in depth over re-explaining it here.
   See `cast.hh`.
 - **Capability**: The self-registration mechanism new architectures/rules/languages use to plug into
   the decompiler at startup. See `capability.hh`.
+- **ActionDatabase**: `Architecture`'s registry of named *root* `Action`s (`decompile`, `jumptable`,
+  `normalize`, `paramid`, `register`, `firstpass`) sliced out of one hand-built "universal" `Action`
+  tree. See `action.hh`, detailed in
+  [`../01-review/architecture-pipeline-overview.md`](../01-review/architecture-pipeline-overview.md).
+- **ArchitectureCapability**: The `Capability` extension point for bootstrapping an `Architecture` from
+  a file (e.g. Bfd, raw binary, XML save-file). Notably *not* how `ArchitectureGhidra` is created — see
+  `architecture.hh` and
+  [`../01-review/architecture-pipeline-overview.md`](../01-review/architecture-pipeline-overview.md).
+- **ArchitectureGhidra**: The `Architecture` subclass used whenever the decompiler is driven by the
+  Ghidra Java client; its `build*` overrides fetch symbols, p-code, types, etc. from that client over
+  the wire protocol instead of from a local file. See `ghidra_arch.hh`.
+- **GhidraCommand / GhidraCapability**: The `Capability`-registered dispatch mechanism for commands the
+  Ghidra client can issue to the `decompile` subprocess (`registerProgram`, `decompileAt`, `setAction`,
+  …). See `ghidra_process.hh`.
+- **PackedEncode / PackedDecode**: The compact binary TLV encoding actually used on the wire between
+  Ghidra and the `decompile` subprocess for commands and query responses (distinct from the XML
+  `Encoder`/`Decoder` pair used for spec files and console save/restore). See `marshal.hh`.
+- **CollapseStructure**: The control-flow structuring algorithm — repeatedly matches and collapses
+  sub-graphs of the CFG into `FlowBlock` structure nodes until one node remains, marking edges as
+  unstructured (`goto`) when no further collapse rule applies. See `blockaction.hh`. Detailed in
+  [`../01-review/control-flow-structuring.md`](../01-review/control-flow-structuring.md).
+- **Irreducible edge**: A control-flow edge that must be removed for the CFG to become reducible (a
+  loop entered only through its header). Detected via a Tarjan-style spanning-tree/reachunder analysis
+  and thereafter treated like a `goto` edge by the structuring algorithm. See `block.cc`
+  (`BlockGraph::findIrreducible`). Detailed in
+  [`../01-review/control-flow-structuring.md`](../01-review/control-flow-structuring.md).
+- **JumpTable**: Recovers a `switch` statement's case-value-to-block mapping from a `CPUI_BRANCHIND`
+  op, independent of (and prior to) block structuring. See `jumptable.hh`. Detailed in
+  [`../01-review/control-flow-structuring.md`](../01-review/control-flow-structuring.md).
+- **Symbol**: The formal, named, typed entity in the scope/symbol-table hierarchy that a `HighVariable`
+  may be tied to via one or more `SymbolEntry` storage mappings. See `database.hh`. Detailed in
+  [`../01-review/ssa-varnode-heritage.md`](../01-review/ssa-varnode-heritage.md).
+- **Cover**: The topological liveness range (per basic block, def-point to last use) of a single
+  `Varnode`'s SSA value; the primitive `Merge` intersection-tests before grouping `Varnode`s into a
+  `HighVariable`. See `cover.hh`.
+- **Merge**: The post-heritage pass that groups `Varnode`s into `HighVariable`s, split into *forced*
+  merges (must happen) and *speculative* merges (attempted, abandoned on any `Cover` intersection). See
+  `merge.hh`.
+- **VarnodeData**: The minimal wire-level `{address space, offset, size}` triple with no dataflow
+  links; what raw P-code speaks before any SSA construction, as opposed to the richer `Varnode`. See
+  `pcoderaw.hh`.
+- **Emit / EmitPrettyPrint**: `Emit` is the abstract low-level token-layout interface (line breaks,
+  indenting, optional XML markup) that `PrintLanguage` targets instead of writing characters directly;
+  `EmitPrettyPrint` is the concrete Oppen-style line-wrapping implementation used in practice, wrapping
+  an inner `Emit` (`EmitMarkup` or `EmitNoMarkup`). See `prettyprint.hh`. Detailed in
+  [`../01-review/expression-cast-printer.md`](../01-review/expression-cast-printer.md).
+- **OpToken**: A static per-operator printing descriptor (text, precedence, associativity, spacing) used
+  by `PrintC`/`PrintJava`; the language-agnostic `PrintLanguage::parentheses()` algorithm decides
+  parenthesization purely from these fields, for both expressions and complex-type declarators. See
+  `printlanguage.hh`. Detailed in
+  [`../01-review/expression-cast-printer.md`](../01-review/expression-cast-printer.md).
