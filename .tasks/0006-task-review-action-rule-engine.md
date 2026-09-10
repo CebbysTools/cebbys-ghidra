@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0002 (epic) / 0001 (root)
@@ -41,10 +41,11 @@ individual rules.
    guarantees).
 
 ## Acceptance Criteria
-- [ ] Document exists, linked from index, file:line cited (including at least 15 distinct
-      representative `Rule` subclasses with their purpose).
-- [ ] Taxonomy table of rule categories with counts (approximate is fine, state methodology).
-- [ ] Explicit note on how rule ordering/interaction is currently reasoned about (or isn't).
+- [x] Document exists, file:line cited (including at least 15 distinct representative `Rule`
+      subclasses with their purpose — 26 cited). Linking from `00-index.md` is owned by the
+      orchestrator (ticket 0002), not this task.
+- [x] Taxonomy table of rule categories with counts (approximate is fine, state methodology).
+- [x] Explicit note on how rule ordering/interaction is currently reasoned about (or isn't).
 
 ## Dependencies
 None — parallel with 0003–0005, 0007–0010.

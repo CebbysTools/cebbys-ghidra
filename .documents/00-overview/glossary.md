@@ -100,6 +100,22 @@ the review document that treats the term in depth over re-explaining it here.
 - **VarnodeData**: The minimal wire-level `{address space, offset, size}` triple with no dataflow
   links; what raw P-code speaks before any SSA construction, as opposed to the richer `Varnode`. See
   `pcoderaw.hh`.
+- **ActionPool**: An `Action` that pools many `Rule` objects and dispatches each `PcodeOp` to only the
+  rules registered for its opcode (via `Rule::getOpList()`), applying them repeatedly to a fixed point.
+  The two largest instances (`oppool1`/`oppool2` in `coreaction.cc`) hold nearly the entire `Rule`
+  catalog. See `action.hh`. Detailed in
+  [`../01-review/action-rule-engine.md`](../01-review/action-rule-engine.md).
+- **Root Action / grouplist**: A named, complete transformation pipeline (e.g. `"decompile"`,
+  `"jumptable"`, `"normalize"`) derived by cloning one `universal` Action tree against a named list of
+  `group` tags (a `grouplist`); each `Action`/`Rule` is tagged with a group string at construction and
+  is included in a derived root Action only if its group is in that root's grouplist. See
+  `ActionDatabase` in `action.hh`. Detailed in
+  [`../01-review/action-rule-engine.md`](../01-review/action-rule-engine.md).
+- **RuleGeneric / rule DSL**: A small, separate pattern-matching mini-language (`rulecompile.hh/cc`)
+  for describing a `Rule`'s match pattern declaratively instead of as hand-written C++; compiles to a
+  `RuleGeneric` instance driven by a `ConstraintGroup`/`UnifyState` graph unifier. Gated behind the
+  `CPUI_RULECOMPILE` build flag, which is off by default, so no shipped `Rule` is a `RuleGeneric`
+  today. Detailed in [`../01-review/action-rule-engine.md`](../01-review/action-rule-engine.md).
 - **Emit / EmitPrettyPrint**: `Emit` is the abstract low-level token-layout interface (line breaks,
   indenting, optional XML markup) that `PrintLanguage` targets instead of writing characters directly;
   `EmitPrettyPrint` is the concrete Oppen-style line-wrapping implementation used in practice, wrapping
