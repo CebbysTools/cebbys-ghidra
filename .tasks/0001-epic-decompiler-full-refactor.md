@@ -39,7 +39,7 @@ decompiler and are only touched where they are direct dependencies of it.
   implementation and next-milestone epics, which are intentionally scoped as stubs for now.
 
 ## Sub-Epics
-- [ ] 0002 — Review of current implementation (architecture, components, datatypes)
+- [x] 0002 — Review of current implementation (architecture, components, datatypes)
 - [ ] 0011 — Flaw analysis & improvement options
 - [ ] 0016 — Requirements definition (incl. rich language features)
 - [ ] 0020 — Solution research & selection

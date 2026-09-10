@@ -4,8 +4,8 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`blocked` (waiting on 0002 review docs to land before deep analysis; may start once at least the
-directly-relevant review document(s) exist rather than waiting for all of 0002)
+`in-progress` (0002 review docs are complete — see `.documents/01-review/00-index.md`; flaw-analysis
+tasks 0012-0015 are underway)
 
 ## Parent
 0001
