@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0020 (epic) / 0001 (root)
@@ -39,10 +39,10 @@ a link, a 3-6 sentence summary, and an explicit "relevance to our requirements" 
 specific REQ-IDs from 0016 where applicable.
 
 ## Acceptance Criteria
-- [ ] Document exists, at least 6 distinct sources covered (mix of tools and papers), every source
+- [x] Document exists, at least 6 distinct sources covered (mix of tools and papers), every source
       linked.
-- [ ] Every source's summary ends with an explicit relevance note tied to REQ-IDs or flaw entries.
-- [ ] A closing synthesis paragraph: "the common thread across prior art that's most applicable here
+- [x] Every source's summary ends with an explicit relevance note tied to REQ-IDs or flaw entries.
+- [x] A closing synthesis paragraph: "the common thread across prior art that's most applicable here
       is..." — this feeds 0022/0023 directly.
 
 ## Dependencies
