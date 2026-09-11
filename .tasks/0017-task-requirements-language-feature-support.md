@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0016 (epic) / 0001 (root)
@@ -46,13 +46,13 @@ full set of gaps found in 0012/0014.
 parent epic, each requirement with rationale + traceability + example sketch.
 
 ## Acceptance Criteria
-- [ ] Document exists, uses REQ-LANG-<n> IDs with MUST/SHOULD/MAY priorities.
-- [ ] Explicitly distinguishes "feasible from single-binary decompilation" vs. "would require external
+- [x] Document exists, uses REQ-LANG-<n> IDs with MUST/SHOULD/MAY priorities.
+- [x] Explicitly distinguishes "feasible from single-binary decompilation" vs. "would require external
       info (PDB/DWARF with template metadata) to ever satisfy" for every generics/templates-related
       requirement — do not overpromise.
-- [ ] At least 2 external references (demangler docs, a paper/blog on recovering C++ semantics in
+- [x] At least 2 external references (demangler docs, a paper/blog on recovering C++ semantics in
       decompilation) cited with links.
-- [ ] At least one before/after worked example.
+- [x] At least one before/after worked example.
 
 ## Dependencies
 0012, 0014.
