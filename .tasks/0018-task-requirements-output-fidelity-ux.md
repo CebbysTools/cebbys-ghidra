@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0016 (epic) / 0001 (root)
@@ -37,10 +37,10 @@ would write), independent of the templates/generics push.
 `.documents/03-requirements/output-fidelity-ux.md`, REQ-OUT-<n> format per parent epic.
 
 ## Acceptance Criteria
-- [ ] Document exists, REQ-OUT-<n> IDs with priorities, each traced to a 0011 flaw or explicit
+- [x] Document exists, REQ-OUT-<n> IDs with priorities, each traced to a 0011 flaw or explicit
       rationale.
-- [ ] Determinism requirement explicitly stated with a proposed verification method.
-- [ ] At least one requirement directly addresses diagnosability of "why did the output look like
+- [x] Determinism requirement explicitly stated with a proposed verification method.
+- [x] At least one requirement directly addresses diagnosability of "why did the output look like
       this."
 
 ## Dependencies
