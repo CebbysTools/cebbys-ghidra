@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0020 (epic) / 0001 (root)
@@ -42,10 +42,10 @@ most basic decompiler features" (epic 0024) as a first slice.
 a comparison matrix (options × MUST-requirements × High-impact flaws) at the end.
 
 ## Acceptance Criteria
-- [ ] Document exists, minimum 3 options fully fleshed out per the required fields.
-- [ ] Comparison matrix present and complete (no blank cells — explicit "N/A" with reason if genuinely
+- [x] Document exists, minimum 3 options fully fleshed out per the required fields.
+- [x] Comparison matrix present and complete (no blank cells — explicit "N/A" with reason if genuinely
       not applicable).
-- [ ] Each option's write-up explicitly says what a first "most basic decompiler features" slice
+- [x] Each option's write-up explicitly says what a first "most basic decompiler features" slice
       (epic 0024) would look like under that option.
 
 ## Dependencies
