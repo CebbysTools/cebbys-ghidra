@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0011 (epic) / 0001 (root)
@@ -44,9 +44,9 @@ dedicated "Refactor Sequencing Risk" table ranking subsystems by (test coverage)
 epics can use it directly.
 
 ## Acceptance Criteria
-- [ ] Document exists, follows required structure, cites file:line/review-doc throughout.
-- [ ] Refactor Sequencing Risk table present, covering at minimum the 6 subsystems reviewed in 0002.
-- [ ] Explicit answer to "can the decompiler be built/run standalone for fast local iteration" with
+- [x] Document exists, follows required structure, cites file:line/review-doc throughout.
+- [x] Refactor Sequencing Risk table present, covering at minimum the 6 subsystems reviewed in 0002.
+- [x] Explicit answer to "can the decompiler be built/run standalone for fast local iteration" with
       evidence.
 
 ## Dependencies

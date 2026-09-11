@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0011 (epic) / 0001 (root)
@@ -39,10 +39,10 @@ flaws, redundancy, and maintainability cost.
 `.documents/02-flaws/varnode-ssa-type-system.md`, structured per the parent epic's required format.
 
 ## Acceptance Criteria
-- [ ] Document exists, follows Observation/Impact/Options structure, every claim cites file:line or a
+- [x] Document exists, follows Observation/Impact/Options structure, every claim cites file:line or a
       review-doc section.
-- [ ] Explicit "datatypes to merge or simplify" subsection with named candidates.
-- [ ] Explicit "type system expressiveness gaps" subsection usable as direct input to 0017.
+- [x] Explicit "datatypes to merge or simplify" subsection with named candidates.
+- [x] Explicit "type system expressiveness gaps" subsection usable as direct input to 0017.
 
 ## Dependencies
 0004, 0005 (their documents must exist).

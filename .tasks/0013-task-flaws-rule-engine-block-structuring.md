@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0011 (epic) / 0001 (root)
@@ -37,9 +37,9 @@ Critically assess the simplification-rule engine and the CFG-structuring algorit
 `.documents/02-flaws/rule-engine-block-structuring.md`, structured per the parent epic's format.
 
 ## Acceptance Criteria
-- [ ] Document exists, follows required structure, cites file:line/review-doc throughout.
-- [ ] At least 5 concrete examples of fragile rule ordering/interaction, each with a source citation.
-- [ ] Explicit recommendation (not yet a decision) on whether to keep, replace, or dual-track the
+- [x] Document exists, follows required structure, cites file:line/review-doc throughout.
+- [x] At least 5 concrete examples of fragile rule ordering/interaction, each with a source citation.
+- [x] Explicit recommendation (not yet a decision) on whether to keep, replace, or dual-track the
       `rulecompile.cc` DSL.
 
 ## Dependencies
