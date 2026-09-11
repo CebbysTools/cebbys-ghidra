@@ -4,7 +4,8 @@
 Epic (root / master)
 
 ## Status
-`in-progress`
+`in-progress` (sub-epics 0002/0011/0016/0020 all complete; 0024/0025 remain stubs, out of scope this
+pass)
 
 ## Parent
 None (root epic)
@@ -42,7 +43,7 @@ decompiler and are only touched where they are direct dependencies of it.
 - [x] 0002 — Review of current implementation (architecture, components, datatypes)
 - [x] 0011 — Flaw analysis & improvement options
 - [x] 0016 — Requirements definition (incl. rich language features)
-- [ ] 0020 — Solution research & selection
+- [x] 0020 — Solution research & selection
 - [ ] 0024 — Iterative implementation of basic decompiler features (stub — out of scope this pass)
 - [ ] 0025 — Preparation for next milestone (stub — out of scope this pass)
 
@@ -58,11 +59,11 @@ decompiler and are only touched where they are direct dependencies of it.
   a conclusion.
 
 ## Acceptance Criteria (for this root epic, current pass)
-- [ ] All tickets for sub-epics 0002, 0011, 0016, 0020 exist with clear scope and are resolved.
-- [ ] `.documents/` contains a coherent, cross-linked set of documents covering review, flaws,
+- [x] All tickets for sub-epics 0002, 0011, 0016, 0020 exist with clear scope and are resolved.
+- [x] `.documents/` contains a coherent, cross-linked set of documents covering review, flaws,
       requirements, and solution research/selection.
-- [ ] `.documents/00-overview/README.md` is a working index into everything produced.
-- [ ] A single Architecture Decision Record (0023) states the selected refactor approach.
+- [x] `.documents/00-overview/README.md` is a working index into everything produced.
+- [x] A single Architecture Decision Record (0023) states the selected refactor approach.
 
 ## Related Documents
 - `.documents/00-overview/README.md`

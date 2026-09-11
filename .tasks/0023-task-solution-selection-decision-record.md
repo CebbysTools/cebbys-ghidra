@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0020 (epic) / 0001 (root)
@@ -34,12 +34,12 @@ explicit rationale, consequences, and what it means for the next two (currently 
   feature milestone should mean, to set up that epic later.
 
 ## Acceptance Criteria
-- [ ] Document exists in ADR format with all sections above.
-- [ ] Decision explicitly references the 0022 comparison matrix (not a fresh, unlinked judgment call).
-- [ ] Deferred requirements are listed explicitly with reasons, not silently dropped.
-- [ ] Epic 0024 scope list exists as guidance text inside this doc, but no new ticket files are created
+- [x] Document exists in ADR format with all sections above.
+- [x] Decision explicitly references the 0022 comparison matrix (not a fresh, unlinked judgment call).
+- [x] Deferred requirements are listed explicitly with reasons, not silently dropped.
+- [x] Epic 0024 scope list exists as guidance text inside this doc, but no new ticket files are created
       by this task — ticket creation for 0024 is future work.
-- [ ] Update `.tasks/0001-epic-decompiler-full-refactor.md` and `.tasks/0020-epic-solution-research-
+- [x] Update `.tasks/0001-epic-decompiler-full-refactor.md` and `.tasks/0020-epic-solution-research-
       and-selection.md` statuses to reflect completion once this lands.
 
 ## Dependencies

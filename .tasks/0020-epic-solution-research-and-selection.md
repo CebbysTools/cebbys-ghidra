@@ -4,8 +4,7 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`in-progress` (epics 0011 and 0016 are complete; tasks 0021-0023 are underway, sequentially since each
-depends on the previous)
+`done`
 
 ## Parent
 0001
@@ -17,9 +16,9 @@ structuring/type recovery) and internally-generated architecture options, evalua
 requirements from 0016, and produces a single, explicit, justified decision.
 
 ## Child Tasks
-- [ ] 0021 — Research: prior art in other decompilers & academic literature
-- [ ] 0022 — Research: internal architecture options for this codebase specifically
-- [ ] 0023 — Decision: Architecture Decision Record selecting the refactor approach
+- [x] 0021 — Research: prior art in other decompilers & academic literature
+- [x] 0022 — Research: internal architecture options for this codebase specifically
+- [x] 0023 — Decision: Architecture Decision Record selecting the refactor approach
 
 ## Deliverables
 - `.documents/04-solution-research/prior-art-external-decompilers.md`
@@ -28,10 +27,10 @@ requirements from 0016, and produces a single, explicit, justified decision.
   artifact of tasks 1–4; everything upstream exists to make this decision well-informed)
 
 ## Acceptance Criteria
-- [ ] All 3 child documents exist and are linked from `.documents/00-overview/README.md`.
-- [ ] The ADR explicitly evaluates at least 3 real options against the 0016 requirements table
+- [x] All 3 child documents exist and are linked from `.documents/00-overview/README.md`.
+- [x] The ADR explicitly evaluates at least 3 real options against the 0016 requirements table
       (a comparison matrix, not just prose preference).
-- [ ] The ADR states what's in scope for epic 0024 (iterative implementation of "most basic
+- [x] The ADR states what's in scope for epic 0024 (iterative implementation of "most basic
       decompiler features") as a direct consequence of the chosen approach, without actually starting
       that implementation.
 
