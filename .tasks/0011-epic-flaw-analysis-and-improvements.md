@@ -4,8 +4,7 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`in-progress` (0002 review docs are complete — see `.documents/01-review/00-index.md`; flaw-analysis
-tasks 0012-0015 are underway)
+`done`
 
 ## Parent
 0001
@@ -20,11 +19,10 @@ improvement options exist — without yet committing to one (that commitment hap
 Same subsystem split as 0002, regrouped into 4 analysis tasks (coarser than review, since flaw
 analysis benefits from cross-subsystem comparison rather than strict per-file isolation).
 
-## Child Tasks
-- [ ] 0012 — Flaws: varnode/SSA representation & type system
-- [ ] 0013 — Flaws: Action/Rule engine & control-flow structuring
-- [ ] 0014 — Flaws: expression/cast logic & printer output quality
-- [ ] 0015 — Flaws: overall architecture, extensibility & API/testability
+- [x] 0012 — Flaws: varnode/SSA representation & type system
+- [x] 0013 — Flaws: Action/Rule engine & control-flow structuring
+- [x] 0014 — Flaws: expression/cast logic & printer output quality
+- [x] 0015 — Flaws: overall architecture, extensibility & API/testability
 
 ## Deliverables
 Each child task produces a document under `.documents/02-flaws/`, each following the same structure:
@@ -33,12 +31,12 @@ pros/cons) → Open questions for the requirements/solution epics.** This epic's
 `.documents/02-flaws/00-index.md` synthesizes a single prioritized flaw list across all four.
 
 ## Acceptance Criteria
-- [ ] All 4 child documents exist and follow the required structure.
-- [ ] `.documents/02-flaws/00-index.md` contains one consolidated, prioritized (High/Med/Low impact)
+- [x] All 4 child documents exist and follow the required structure.
+- [x] `.documents/02-flaws/00-index.md` contains one consolidated, prioritized (High/Med/Low impact)
       table of flaws with links into the detail docs.
-- [ ] Every flaw entry cites the specific review-doc section and file:line it stems from — no
+- [x] Every flaw entry cites the specific review-doc section and file:line it stems from — no
       unsourced claims.
-- [ ] At least one entry explicitly addresses "datatypes to merge" per the user's stated goal.
+- [x] At least one entry explicitly addresses "datatypes to merge" per the user's stated goal.
 
 ## Related Documents
 - `.documents/02-flaws/00-index.md`

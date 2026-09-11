@@ -40,7 +40,7 @@ decompiler and are only touched where they are direct dependencies of it.
 
 ## Sub-Epics
 - [x] 0002 — Review of current implementation (architecture, components, datatypes)
-- [ ] 0011 — Flaw analysis & improvement options
+- [x] 0011 — Flaw analysis & improvement options
 - [ ] 0016 — Requirements definition (incl. rich language features)
 - [ ] 0020 — Solution research & selection
 - [ ] 0024 — Iterative implementation of basic decompiler features (stub — out of scope this pass)

@@ -4,8 +4,8 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`blocked` (benefits from 0011's flaw docs but is primarily forward-looking; may start once at least
-0012's "type system expressiveness gaps" section exists)
+`in-progress` (epic 0011 is complete — see `.documents/02-flaws/00-index.md`; requirements tasks
+0017-0019 are underway)
 
 ## Parent
 0001
