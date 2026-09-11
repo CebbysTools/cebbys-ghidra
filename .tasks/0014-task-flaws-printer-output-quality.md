@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0011 (epic) / 0001 (root)
@@ -39,10 +39,10 @@ requirement, since the printer is where language-specific syntax ultimately has 
 `.documents/02-flaws/printer-output-quality.md`, structured per the parent epic's format.
 
 ## Acceptance Criteria
-- [ ] Document exists, follows required structure, cites file:line/review-doc throughout.
-- [ ] Direct, explicit link established between "no template/generic support" and the specific
+- [x] Document exists, follows required structure, cites file:line/review-doc throughout.
+- [x] Direct, explicit link established between "no template/generic support" and the specific
       printer/type-system limitation causing it (cross-ref 0012).
-- [ ] At least 3 concrete improvement options with pros/cons.
+- [x] At least 3 concrete improvement options with pros/cons.
 
 ## Dependencies
 0009 (and benefits from 0012 for the type-system side of the cross-reference).
