@@ -4,8 +4,7 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`in-progress` (epic 0011 is complete — see `.documents/02-flaws/00-index.md`; requirements tasks
-0017-0019 are underway)
+`done`
 
 ## Parent
 0001
@@ -23,9 +22,9 @@ either to a flaw in 0011 or to an explicit goal from the user's original request
 features, extensibility).
 
 ## Child Tasks
-- [ ] 0017 — Requirements: rich language feature support (templates/generics, modern type fidelity)
-- [ ] 0018 — Requirements: output fidelity & readability (UX of the generated C)
-- [ ] 0019 — Requirements: extensibility, API & integration/testability
+- [x] 0017 — Requirements: rich language feature support (templates/generics, modern type fidelity)
+- [x] 0018 — Requirements: output fidelity & readability (UX of the generated C)
+- [x] 0019 — Requirements: extensibility, API & integration/testability
 
 ## Requirement Format
 Each requirement gets a stable ID (`REQ-<domain>-<n>`), a MUST/SHOULD/MAY priority (RFC-2119 style),
@@ -38,11 +37,11 @@ consolidating the full requirements table (ID, priority, one-liner, source doc) 
 epic 0020.
 
 ## Acceptance Criteria
-- [ ] All 3 child documents exist with requirements in the specified format.
-- [ ] `00-index.md` has one master table of every requirement ID.
-- [ ] Every MUST-priority requirement traces to at least one 0011 flaw entry or an explicit statement
+- [x] All 3 child documents exist with requirements in the specified format.
+- [x] `00-index.md` has one master table of every requirement ID.
+- [x] Every MUST-priority requirement traces to at least one 0011 flaw entry or an explicit statement
       in this epic's own summary (rich language features).
-- [ ] At least one concrete worked example (real-ish decompiled function shape) showing current output
+- [x] At least one concrete worked example (real-ish decompiled function shape) showing current output
       vs. desired output for a templates/generics-adjacent case (e.g. a C++ template-instantiated
       function, or a family of type-punned functions that should collapse to one generic).
 

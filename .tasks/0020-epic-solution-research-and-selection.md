@@ -4,8 +4,8 @@
 Epic (sub-epic of 0001)
 
 ## Status
-`blocked` (requires 0011 and 0016 documents to exist — this is a synthesis epic and must run last
-among 1–4)
+`in-progress` (epics 0011 and 0016 are complete; tasks 0021-0023 are underway, sequentially since each
+depends on the previous)
 
 ## Parent
 0001
