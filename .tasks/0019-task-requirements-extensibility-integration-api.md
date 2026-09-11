@@ -4,7 +4,7 @@
 Task
 
 ## Status
-`todo`
+`done`
 
 ## Parent
 0016 (epic) / 0001 (root)
@@ -39,9 +39,9 @@ module boundaries, testability, and compatibility with the existing Java front e
 `.documents/03-requirements/extensibility-integration-api.md`, REQ-ARCH-<n> format per parent epic.
 
 ## Acceptance Criteria
-- [ ] Document exists, REQ-ARCH-<n> IDs with priorities, each traced to a 0011/0015 flaw.
-- [ ] Explicit wire-protocol compatibility bar stated.
-- [ ] Explicit characterization-test coverage bar stated (a number or concrete method, not just
+- [x] Document exists, REQ-ARCH-<n> IDs with priorities, each traced to a 0011/0015 flaw.
+- [x] Explicit wire-protocol compatibility bar stated.
+- [x] Explicit characterization-test coverage bar stated (a number or concrete method, not just
       "good coverage").
 
 ## Dependencies
